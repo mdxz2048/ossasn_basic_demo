@@ -228,8 +228,8 @@ int main()
     encode_and_print_rtcm_corrections(&world, &rtcm_corrections);
 
     // 这里你可以贴入你要解码的UPER编码字符串和对应的PDU类型
-    const char *uper_hex_string = "0381024003802a002569c6660686060606d178788599ca95927f4dc273800000001f41f41fdfffef8004960fa1e050400040016f000213f0c40e6e6b8042e30dc4442921ce8440b8c8663739974341c7bbd0c7d078a8e17920ec358683b43da26c8d167f3f4d300607b491b31fed4e56634d778265b0148d06a78a1e96f45d6e94ec49898ec029";
-    int pdu_num = asnMessageTypes_OSET; // 你可以根据实际需要设置PDU类型
+    const char *uper_hex_string = "3023800101A11E300D800101810203E9820401020304300D800101810203EA820405060708";
+    int pdu_num = asnRTCMcorrections_PDU; // 你可以根据实际需要设置PDU类型
 
     // 解码并打印 ASN.1 数据
     decode_and_print_asn1_data(&world, uper_hex_string, pdu_num);
